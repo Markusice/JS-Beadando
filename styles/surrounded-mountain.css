@@ -1,0 +1,47 @@
+.surrounded-mountain {
+  grid-row: 1;
+  display: grid;
+  row-gap: 0.75rem;
+  max-width: max-content;
+  background-color: white;
+  border-radius: 0.375rem;
+  padding: 0.375rem;
+}
+.surrounded-mountain__flex-group {
+  display: flex;
+  max-width: 4rem;
+  column-gap: 0.75rem;
+  place-items: center;
+  color: #121212;
+  font-size: 0.75rem;
+}
+.surrounded-mountain__flex-group p {
+  font-size: 1.25rem;
+  color: #ffa900;
+}
+.surrounded-mountain__table {
+  display: grid;
+  place-content: center;
+  grid-auto-columns: minmax(auto, 2rem);
+  grid-auto-flow: column;
+  column-gap: 0.125rem;
+}
+.surrounded-mountain__table > div {
+  display: grid;
+  row-gap: 0.125rem;
+}
+.surrounded-mountain__table > div > div {
+  aspect-ratio: 1/1;
+  border-radius: 0.375rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.game-table-grid-group {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: max-content auto;
+  column-gap: 0.25rem;
+}
+
+/*# sourceMappingURL=surrounded-mountain.css.map */

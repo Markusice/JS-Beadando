@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Kreon:wght@300;400;600;700&display=swap");
+body {
+  font-family: "Kreon", serif;
+}
+
+#container {
+  aspect-ratio: 1.4785949506/1;
+  max-width: 1347px;
+  min-width: 768px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#main-container .main__title {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+}
+#main-container #game-table > div > div {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#sidebar-container #points p {
+  font-size: clamp(0.75rem, 1.5vw, 1.5rem);
+}
+#sidebar-container #season-cards h2,
+#sidebar-container #game-controls h2 {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+#sidebar-container #season-cards p,
+#sidebar-container #season-cards button,
+#sidebar-container #game-controls p,
+#sidebar-container #game-controls button {
+  font-size: clamp(0.75rem, 1.75vw, 1.5rem);
+}
+#sidebar-container #cards .card {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+}
+#sidebar-container #cards .card.active .card__letter::before {
+  content: url("../images/circle.svg");
+  margin-inline-end: 0.125rem;
+}
+#sidebar-container #cards .card__title {
+  font-size: clamp(0.75rem, 2vw, 1rem);
+}
+#sidebar-container #cards .card__description {
+  font-size: clamp(0.5rem, 1vw, 0.75rem);
+}
+#sidebar-container #cards .card__points {
+  font-size: clamp(0.625rem, 1vw, 0.875rem);
+}
+#sidebar-container #cards .card__letter {
+  font-size: clamp(0.75rem, 2.5vw, 1.375rem);
+  line-height: 0.5;
+}
+#sidebar-container #game-controls button {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+  width: clamp(4rem, 10vw, 10rem);
+}
+#sidebar-container #game-controls button::after {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+#sidebar-container #game-controls #game-display__top-right {
+  grid-column: span 1/5;
+}
+#sidebar-container #game-controls #game-display__game-table {
+  grid-auto-columns: clamp(2rem, 4vw, 4rem);
+}
+#sidebar-container #game-controls #game-display__game-table > div > div {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/*# sourceMappingURL=style.css.map */

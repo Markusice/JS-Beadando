@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burgonya térkép - JS beadandó</title>
+
+    <!--    <link rel="stylesheet" href="./dist/output.css" />-->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/message-styles.css" />
+    <link rel="stylesheet" href="./styles/end-game-styles.css" />
+    <link rel="stylesheet" href="./styles/surrounded-mountain.css" />
+
+    <script type="module" src="./scripts/app.js" defer></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="dark:bg-neutral-800">
+    <div
+      id="container"
+      class="relative me-auto ms-auto grid auto-cols-[1.1fr_1fr] grid-flow-col dark:text-white"
+    >
+      <img
+        src="./images/background.webp"
+        alt="Burgonya térkép háttérképe"
+        class="absolute z-[5] opacity-40"
+        width="1347"
+        height="911"
+      />
+
+      <div
+        id="main-container"
+        class="relative z-10 ml-4 flex flex-col justify-evenly"
+      >
+        <header class="ml-4">
+          <h1 class="main__title">Burgonya térkép</h1>
+        </header>
+
+        <main
+          id="game-table"
+          class="grid max-w-max auto-cols-[minmax(auto,3.5rem)] grid-flow-col gap-x-[0.125rem] self-end rounded-md bg-white p-2"
+        >
+          <div class="grid gap-y-[0.125rem]">
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+          </div>
+          <div class="grid gap-y-[0.125rem]">
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+          </div>
+          <div class="grid gap-y-[0.125rem]">
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+          </div>
+          <div class="grid gap-y-[0.125rem]">
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+          </div>
+          <div class="grid gap-y-[0.125rem]">
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+          </div>
+          <div class="grid gap-y-[0.125rem]">
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+          </div>
+          <div class="grid gap-y-[0.125rem]">
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+          </div>
+          <div class="grid gap-y-[0.125rem]">
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+          </div>
+          <div class="grid gap-y-[0.125rem]">
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+          </div>
+          <div class="grid gap-y-[0.125rem]">
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+          </div>
+          <div class="grid gap-y-[0.125rem]">
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+            <div class="aspect-square rounded-md bg-orange-200"></div>
+          </div>
+        </main>
+      </div>
+
+      <aside
+        id="sidebar-container"
+        class="relative z-10 mx-4 mt-6 flex flex-col gap-y-2"
+      >
+        <div
+          id="points"
+          class="grid auto-cols-[min(8vw,7rem)] items-center justify-center gap-x-2 gap-y-1 text-white"
+        >
+          <div
+            id="spring"
+            class="flex aspect-square items-center justify-center rounded-xl border-4 border-green-700 bg-green-400 p-2 font-light"
+          >
+            <p class="text-center">
+              Tavasz:<br /><span class="value">0</span> pont
+            </p>
+          </div>
+          <div
+            id="summer"
+            class="flex aspect-square items-center justify-center rounded-xl border-4 border-yellow-500 bg-amber-200 p-2 font-light"
+          >
+            <p class="text-center">
+              Nyár:<br /><span class="value">0</span> pont
+            </p>
+          </div>
+          <div
+            id="autumn"
+            class="flex aspect-square items-center justify-center rounded-xl border-4 border-yellow-900 bg-orange-300 p-2 font-light"
+          >
+            <p class="text-center">
+              Ősz:<br /><span class="value">0</span> pont
+            </p>
+          </div>
+          <div
+            id="winter"
+            class="flex aspect-square items-center justify-center rounded-xl border-4 border-cyan-600 bg-sky-300 p-2 font-light"
+          >
+            <p class="text-center">
+              Tél:<br /><span class="value">0</span> pont
+            </p>
+          </div>
+          <p
+            id="points__total"
+            class="col-span-4 justify-self-center text-black dark:text-white"
+          >
+            Összesen: <span class="value">0</span> pont
+          </p>
+        </div>
+
+        <div id="season-cards">
+          <h2
+            id="season-cards__season"
+            class="mb-2 border-b-2 border-black pb-1"
+          >
+            Jelenlegi évszak: <span class="values font-bold"></span>
+          </h2>
+
+          <div
+            id="cards"
+            class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,_200px),1fr))] gap-3 text-white"
+          >
+            <article
+              class="card grid grid-cols-[1fr,2.5fr] items-center gap-x-2 rounded-2xl bg-[#363636] py-2 pl-6 pr-2"
+            >
+              <div class="card__table"><img src="" alt="" /></div>
+              <div class="card__content grid max-w-[10rem] gap-y-0.5">
+                <h2 class="card__title"></h2>
+                <p class="card__description font-light leading-none"></p>
+                <div class="flex items-end justify-between">
+                  <p class="card__points">
+                    (<span class="value">0</span> pont)
+                  </p>
+                  <h2 class="card__letter font-semibold"></h2>
+                </div>
+              </div>
+            </article>
+            <article
+              class="card grid grid-cols-[1fr,2.5fr] items-center gap-x-2 rounded-2xl bg-[#363636] py-2 pl-6 pr-2"
+            >
+              <div class="card__table"><img src="" alt="" /></div>
+              <div class="card__content grid max-w-[10rem] gap-y-0.5">
+                <h2 class="card__title"></h2>
+                <p class="card__description font-light leading-none"></p>
+                <div class="flex items-end justify-between">
+                  <p class="card__points">
+                    (<span class="value">0</span> pont)
+                  </p>
+                  <h2 class="card__letter font-semibold"></h2>
+                </div>
+              </div>
+            </article>
+            <article
+              class="card grid grid-cols-[1fr,2.5fr] items-center gap-x-2 rounded-2xl bg-[#363636] py-2 pl-6 pr-2"
+            >
+              <div class="card__table"><img src="" alt="" /></div>
+              <div class="card__content grid max-w-[10rem] gap-y-0.5">
+                <h2 class="card__title"></h2>
+                <p class="card__description font-light leading-none"></p>
+                <div class="flex items-end justify-between">
+                  <p class="card__points">
+                    (<span class="value">0</span> pont)
+                  </p>
+                  <h2 class="card__letter font-semibold"></h2>
+                </div>
+              </div>
+            </article>
+            <article
+              class="card grid grid-cols-[1fr,2.5fr] items-center gap-x-2 rounded-2xl bg-[#363636] py-2 pl-6 pr-2"
+            >
+              <div class="card__table"><img src="" alt="" /></div>
+              <div class="card__content grid max-w-[10rem] gap-y-0.5">
+                <h2 class="card__title"></h2>
+                <p class="card__description font-light leading-none"></p>
+                <div class="flex items-end justify-between">
+                  <p class="card__points">
+                    (<span class="value">0</span> pont)
+                  </p>
+                  <h2 class="card__letter font-semibold"></h2>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div id="game-controls">
+          <h2
+            id="game-controls__season"
+            class="mb-2 border-b-2 border-black pb-1"
+          >
+            Évszakból hátralevő idő: <span class="value">7</span>/7
+          </h2>
+
+          <div id="game-controls__main" class="grid grid-flow-col gap-4">
+            <p class="dark:text-white">Lehelyezendő elem:</p>
+            <button
+              id="rotate-btn"
+              class="relative row-start-2 row-end-3 self-end justify-self-end rounded-2xl bg-white py-3.5 after:absolute after:inset-0 after:z-[-1] after:h-full after:w-full after:rounded-2xl after:opacity-0 after:transition-opacity hover:after:opacity-100 dark:bg-neutral-800"
+            >
+              Forgatás
+            </button>
+            <button
+              id="mirror-btn"
+              class="relative row-start-3 row-end-4 self-start justify-self-end rounded-2xl bg-white py-3.5 after:absolute after:inset-0 after:z-[-1] after:h-full after:w-full after:rounded-2xl after:opacity-0 after:transition-opacity hover:after:opacity-100 dark:bg-neutral-800"
+            >
+              Tükrözés
+            </button>
+            <div
+              id="game-display"
+              class="row-span-3 grid grid-cols-4 gap-1.5 justify-self-start rounded-2xl bg-white px-4 shadow-inner dark:bg-neutral-800"
+            >
+              <div
+                id="game-display__top-right"
+                class="flex items-center gap-x-1 py-0.5"
+              >
+                <p id="game-display__time-unit"></p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="game-display__clock"
+                  class="h-6 w-6 dark:fill-white"
+                  data-name="Layer 1"
+                  viewBox="0 0 24 24"
+                  width="512"
+                  height="512"
+                >
+                  <path
+                    d="M12,24C5.383,24,0,18.617,0,12S5.383,0,12,0s12,5.383,12,12-5.383,12-12,12Zm0-22C6.486,2,2,6.486,2,12s4.486,10,10,10,10-4.486,10-10S17.514,2,12,2Zm.5,10.866l3.464-2c.479-.276,.642-.888,.366-1.366-.277-.479-.889-.644-1.366-.366l-1.964,1.134V6c0-.553-.448-1-1-1s-1,.447-1,1v6c0,.357,.19,.688,.5,.866,.155,.089,.327,.134,.5,.134s.345-.045,.5-.134Z"
+                  />
+                </svg>
+              </div>
+
+              <div
+                id="game-display__game-table"
+                class="col-span-3 grid grid-flow-col justify-center gap-x-1 pb-2"
+              >
+                <div class="grid gap-y-1">
+                  <div class="aspect-square rounded-md"></div>
+                  <div class="aspect-square rounded-md"></div>
+                  <div class="aspect-square rounded-md"></div>
+                </div>
+                <div class="grid gap-y-1">
+                  <div class="aspect-square rounded-md"></div>
+                  <div class="aspect-square rounded-md"></div>
+                  <div class="aspect-square rounded-md"></div>
+                </div>
+                <div class="grid gap-y-1">
+                  <div class="aspect-square rounded-md"></div>
+                  <div class="aspect-square rounded-md"></div>
+                  <div class="aspect-square rounded-md"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+.message-wrapper {
+  --_outline-clr: var(--outline-clr, #0a0a0a);
+  --outline-clr: #b91c1c;
+  font-family: system-ui;
+  position: fixed;
+  z-index: 9999;
+  margin: auto;
+  pointer-events: none;
+  color: white;
+  background-color: #2c303a;
+  width: max-content;
+  padding-inline: 0.5rem;
+  padding-block: 0.125rem;
+  border-radius: 0.375rem;
+  border: 0.125rem solid var(--_outline-clr);
+  transform: translateY(-100%) scaleX(70%);
+  inset: 0 0 auto 0;
+}
+
+.message {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+}
+
+@keyframes showMessage {
+  100% {
+    inset: 16px 0 auto 0;
+    transform: translateY(0%) scaleX(100%);
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+  }
+}
+@keyframes hideMessage {
+  0% {
+    inset: 16px 0 auto 0;
+    transform: translateY(0%) scaleX(100%);
+  }
+  100% {
+    inset: 0 0 auto 0;
+    transform: translateY(-100%) scaleX(70%);
+    box-shadow: none;
+  }
+}
+
+/*# sourceMappingURL=message-styles.css.map */
